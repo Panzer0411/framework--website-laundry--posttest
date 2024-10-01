@@ -1,0 +1,33 @@
+{% extends "laundry/layout.html" %}
+
+{% block konten %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Buat Pesanan Baru untuk {{ layanan.nama }}</h2>
+  <form method="POST" action="{% url 'proses_pesanan' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="nama_pelanggan" class="form-label">Nama Pelanggan</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nama_pelanggan"
+        name="nama_pelanggan"
+        required
+      />
+    </div>
+    <input type="hidden" name="layanan_id" value="{{ layanan.id }}">
+    <div class="mb-3">
+      <label for="berat" class="form-label">Berat Cucian (kg)</label>
+      <input
+        type="number"
+        class="form-control"
+        id="berat"
+        name="berat"
+        step="0.01"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Buat Pesanan</button>
+  </form>
+</div>
+{% endblock konten %}

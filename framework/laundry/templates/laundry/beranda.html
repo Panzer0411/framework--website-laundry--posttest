@@ -1,0 +1,81 @@
+{% extends "laundry/layout.html" %}
+
+{% load static %}
+
+{% block konten %}
+<!-- Hero Section -->
+<section class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h1>Welcome to Our Laundry Services</h1>
+    <p class="lead">
+      Clean clothes, hassle-free service, and quick turnaround time.
+    </p>
+    <a href="#services" class="btn btn-light btn-lg">Explore Our Services</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>About Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          accusamus blanditiis quod suscipit ipsam. Harum eos pariatur et
+          labore, ipsa atque, vero commodi iusto, distinctio quidem dolorum
+          possimus sequi sunt.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <img src="{% static 'images/laundry.jpeg' %}" class="img-fluid" alt="Laundry Image" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center">Our Services</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Dry Cleaning</h5>
+            <p class="card-text">
+              We provide premium dry cleaning services for your delicate
+              garments.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Laundry Service</h5>
+            <p class="card-text">
+              From everyday wear to linens, we handle all your laundry needs
+              with care.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Ironing Service</h5>
+            <p class="card-text">
+              We offer precise ironing services to keep your clothes looking
+              sharp.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="{% url 'layanan' %}" class="btn btn-primary btn-lg">Lihat Layanan</a>
+    </div>
+  </div>
+</section>
+{% endblock konten %}
